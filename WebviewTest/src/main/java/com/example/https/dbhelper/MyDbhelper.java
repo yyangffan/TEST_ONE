@@ -17,7 +17,7 @@ public class MyDbhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table"+ name+"(_id integer primary key autoincrement,url text)");
+        db.execSQL("create table "+ name+"(_id integer primary key autoincrement,url text)");
     }
 
     @Override

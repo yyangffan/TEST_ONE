@@ -22,7 +22,7 @@ public class DButile {
     public DButile(Activity context) {
         mContext = context;
         mList = new ArrayList<>();
-        mMyDbhelper = new MyDbhelper(context, "user.db", null, 1);
+        mMyDbhelper = new MyDbhelper(context, "user", null, 1);
     }
 
     public void creatTable(String name) {

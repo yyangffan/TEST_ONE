@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:id="@+id/main_btConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="联 网"
+            android:textColor="#0f9"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/main_btFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_btConnect"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="结 束"
+            android:textColor="#f00"
+            android:textSize="24sp"/>
+
+        <WebView
+            android:id="@+id/main_wvHtml"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_btFinish"
+            android:padding="10dp">
+
+        </WebView>
+
+        <TextView
+            android:id="@+id/main_tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_wvHtml"
+            android:hint="请求结果"
+            android:padding="3dp"
+            android:textColor="#00f"
+            android:textSize="16sp"
+           />
+
+        <ImageView
+            android:id="@+id/main_imgvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_wvHtml"
+            android:layout_centerInParent="true"
+            android:hint="请求结果"
+            android:padding="3dp"
+            android:scaleType="center"
+            />
+
+        <!-- <ProgressBar
+             style="@android:style/Widget.ProgressBar.Large"
+             android:id="@+id/main_progressBar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:layout_alignTop="@+id/main_wvHtml"
+             android:max="100"
+             android:progressDrawable="@drawable/progress_bar_states"
+             android:progress="0"/>-->
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avloadingIndicatorView_BallPulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/main_wvHtml"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:indicator="BallTrianglePath"
+            app:indicator_color="#f00"
+            />
+
+    </RelativeLayout>
+</ScrollView>

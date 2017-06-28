@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edMenuBackground="#dddddd"
+    app:edMenuSize="260dp"
+    app:edPosition="1">
+    <!--content-->
+    <com.example.https.view.RefreshLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main2_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/main2_llTop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/main2_bt_bg"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/main2_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:hint="输入关键字"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textColor="#00f"
+                    android:textColorHint="#B4B4B4"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/main2_imgv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/delate"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/main2_imgv2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:onClick="go"
+                android:src="@mipmap/search"
+                android:text="加载"
+                android:textColor="#0f0"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_main2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/main2_loading"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:indicator="BallSpinFadeLoader"
+                app:indicator_color="#f00"
+                />
+
+            <com.example.https.view.ScrollWebView
+                android:id="@+id/main2_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/main2_loading"
+                android:padding="5dp"/>
+
+            <com.shamanland.fab.FloatingActionButton
+                android:id="@+id/fabR"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.5"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/forward"
+                android:visibility="gone"
+                app:floatingActionButtonColor="#fff"
+                app:floatingActionButtonSize="mini"
+                />
+
+            <com.shamanland.fab.FloatingActionButton
+                android:id="@+id/fabL"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.5"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/back"
+                android:visibility="gone"
+                app:floatingActionButtonColor="#fff"
+                app:floatingActionButtonSize="mini"
+                />
+
+            <com.shamanland.fab.FloatingActionButton
+                android:id="@+id/fabC"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.5"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/reload"
+                android:visibility="gone"
+                app:floatingActionButtonColor="#fff"
+                app:floatingActionButtonSize="mini"
+                />
+        </RelativeLayout>
+    </com.example.https.view.RefreshLinearLayout>
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
